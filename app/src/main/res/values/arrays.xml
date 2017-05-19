@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="init_list">
+        <item>Dante</item>
+        <item>Cyran</item>
+        <item>Ashwold</item>
+        <item>Drow Elves</item>
+        <item>Rashe</item>
+        <item>Zombies</item>
+    </string-array>
+
+    <string-array name="pc_list">
+        <item>Cyran</item>
+        <item>Dante</item>
+        <item>Ashwold</item>
+        <item>Rashe</item>
+        <item>Briana</item>
+    </string-array>
+
+    <string-array name="monster_list">
+        <item>Drow Elves</item>
+        <item>Zombies</item>
+        <item>Necromancer</item>
+    </string-array>
+</resources>

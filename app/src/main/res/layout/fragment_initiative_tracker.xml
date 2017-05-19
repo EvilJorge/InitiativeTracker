@@ -1,0 +1,84 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context="com.example.android.initiativetracker.InitiativeTrackerFragment">
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/initiative_recview"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:divider="@null"/>
+
+    <!-- List of PCs -->
+
+    <TextView
+        android:id="@+id/pc_label_textview"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="@string/PCs_label"/>
+    <ListView
+        android:id="@+id/pc_listview"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
+        android:layout_below="@id/pc_label_textview"
+        android:layout_alignParentRight="true"
+        android:paddingTop="20dp"
+        android:paddingRight="10dp"
+        android:divider="@null"/>
+
+    <Button
+        android:id="@+id/pc_add_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_above="@+id/pc_remove_button"
+        android:layout_toLeftOf="@id/pc_listview"
+        android:onClick="openAddPCWindow"
+        android:text="@string/add_label"/>
+
+    <Button
+        android:id="@id/pc_remove_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignBottom="@id/pc_listview"
+        android:layout_toLeftOf="@id/pc_listview"
+        android:text="@string/remove_label"/>
+
+    <!-- List of NPCs -->
+    <TextView
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/enemy_listview"
+        android:layout_alignParentRight="true"
+        android:text="@string/NPCs_label"/>
+    <ListView
+        android:id="@+id/enemy_listview"
+        android:layout_width="200dp"
+        android:layout_height="240dp"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:paddingRight="10dp"
+        android:paddingBottom="20dp"
+        android:divider="@null"/>
+
+    <Button
+        android:id="@+id/enemy_add_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_alignTop="@id/enemy_listview"
+        android:layout_toLeftOf="@id/enemy_listview"
+        android:text="@string/add_label"/>
+
+    <Button
+        android:id="@+id/enemy_remove_button"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_below="@id/enemy_add_button"
+        android:layout_toLeftOf="@id/enemy_listview"
+        android:text="@string/remove_label"/>
+
+</RelativeLayout>

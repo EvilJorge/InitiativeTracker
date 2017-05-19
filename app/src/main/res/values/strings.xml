@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">Initiative Tracker</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Menu Items -->
+    <string name="action_disable_drag">Disable drag</string>
+    <string name="action_enable_drag">Enable drag</string>
+
+    <!-- Labels -->
+    <string name="PCs_label">PCs</string>
+    <string name="NPCs_label">NPCs</string>
+
+    <!-- Button Labels -->
+    <string name="add_label">+</string>
+    <string name="remove_label">-</string>
+    <string name="roll_all_label">Roll All</string>
+
+    <!-- Add PC Window -->
+    <string name="add_name_label">Name</string>
+    <string name="add_init_label">Initiative</string>
+    <string name="add_ac_label">Armor Class</string>
+</resources>

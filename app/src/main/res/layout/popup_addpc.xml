@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/add_pc_window"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="150dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="Add a PC to the Encounter"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- Name -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_name_label"/>
+
+        <EditText
+            android:id="@+id/add_name_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="100dp"
+            android:inputType="text" />
+
+        <!-- Initiative -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_init_label"/>
+
+        <EditText
+            android:id="@+id/add_init_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="30dp"
+            android:inputType="number"/>
+
+        <!-- AC -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/add_ac_label"/>
+
+        <EditText
+            android:id="@+id/add_ac_entry"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minWidth="30dp"
+            android:inputType="number"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/add_pc_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addNewPC"
+        android:text="Add PC"/>
+
+</LinearLayout>
