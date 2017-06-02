@@ -13,15 +13,15 @@ import java.util.ArrayList;
  * Created by cpalomares on 5/3/2017.
  */
 
-public class PCListAdapter extends ArrayAdapter<PCClass> {
-    public PCListAdapter(Context context, ArrayList<PCClass> pcList){
+public class PCListAdapter extends ArrayAdapter<Actor> {
+    public PCListAdapter(Context context, ArrayList<Actor> pcList){
         super(context, 0, pcList);
     }
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
         // Get the data item for this position
-        PCClass pc = getItem(position);
+        Actor pc = getItem(position);
 
         // Check if an existing view is being reused, otherwise inflate the view
         if (convertView == null){

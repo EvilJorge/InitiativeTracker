@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 public class InitiativeListAdapter extends RecyclerView.Adapter<InitiativeListAdapter.ViewHolder> {
     // Store a member variable for the contacts
-    private ArrayList<PCClass> mInitiativeList;
+    private ArrayList<Actor> mInitiativeList;
 
     // Store the context for easy access
     private Context mContext;
@@ -34,7 +34,7 @@ public class InitiativeListAdapter extends RecyclerView.Adapter<InitiativeListAd
     }
 
     // Provide a suitable constructor (depends on the kind of dataset)
-    public InitiativeListAdapter(Context context, ArrayList<PCClass> initList){
+    public InitiativeListAdapter(Context context, ArrayList<Actor> initList){
         mInitiativeList = initList;
         mContext = context;
     }
@@ -62,7 +62,7 @@ public class InitiativeListAdapter extends RecyclerView.Adapter<InitiativeListAd
     @Override
     public void onBindViewHolder(InitiativeListAdapter.ViewHolder viewHolder, int position){
         // Get the data model based on position
-        PCClass newCharacter = mInitiativeList.get(position);
+        Actor newCharacter = mInitiativeList.get(position);
 
         // Set items based on your views and data model
         TextView textView = viewHolder.mNameTextView;
@@ -77,7 +77,7 @@ public class InitiativeListAdapter extends RecyclerView.Adapter<InitiativeListAd
 //    @Override
 //    public View getView(int position, View convertView, ViewGroup parent){
 //        // Get the data item for this position
-//        PCClass actor = getItem(position);
+//        Actor actor = getItem(position);
 //
 //        // Check if an existing view is being reused, otherwise inflate the view
 //        if (convertView == null){

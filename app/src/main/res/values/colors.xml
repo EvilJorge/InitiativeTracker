@@ -6,4 +6,6 @@
 
     <color name="list_item_background">#AACCCCCC</color>
     <color name="app_color">#8EAE3C</color>
+
+    <color name="popupBackground">#666666</color>
 </resources>

@@ -20,9 +20,9 @@ import java.util.ArrayList;
 public class InitiativeTrackerFragment extends Fragment {
 
     // Data Lists
-    private ArrayList<PCClass> mPCList = new ArrayList<PCClass>();
+    private ArrayList<Actor> mPCList = new ArrayList<Actor>();
     private ArrayList<MonsterClass> mMonsterList = new ArrayList<MonsterClass>();
-    private ArrayList<PCClass> mInitiativeList = new ArrayList<PCClass>();
+    private ArrayList<Actor> mInitiativeList = new ArrayList<Actor>();
 
     // Adapters
     private PCListAdapter mPCListAdapter;
@@ -48,7 +48,7 @@ public class InitiativeTrackerFragment extends Fragment {
         //ViewGroup.LayoutParams InitiativeListViewParams = mInitiativeListView.getLayoutParams();
 
         if(savedInstanceState == null || !savedInstanceState.containsKey("key")) {
-            populatePCList();
+            //populatePCList();
             populateEnemyList();
         } else {
             mPCList = savedInstanceState.getParcelableArrayList("key");
@@ -101,7 +101,7 @@ public class InitiativeTrackerFragment extends Fragment {
         for(init = 0; init < 5; init++){
             name = nameList[init];
             ac = 10+ nameList[init].length();
-            PCClass newPC = new PCClass(name, init, ac);
+            Actor newPC = new Actor(name, init, ac);
             mPCList.add(newPC);
         }
     }
@@ -121,14 +121,14 @@ public class InitiativeTrackerFragment extends Fragment {
     }
 
     public void populateInitiativeList(){
-        for (PCClass nextPC:mPCList) {
+        for (Actor nextPC:mPCList) {
             mInitiativeList.add(nextPC);
         }
     }
 
     // Public Methods
     public void addtoPCList(String name, int initiative, int ac){
-        PCClass newPC = new PCClass(name, initiative, ac);
+        Actor newPC = new Actor(name, initiative, ac);
         mPCList.add(newPC);
         mPCListAdapter.notifyDataSetChanged();
     }

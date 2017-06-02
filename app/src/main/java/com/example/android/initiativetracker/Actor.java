@@ -7,18 +7,18 @@ import android.os.Parcelable;
  * Created by cpalomares on 5/3/2017.
  */
 
-public class PCClass implements Parcelable {
+public class Actor implements Parcelable {
     public String name;
     public int initiative;
     public int AC;
 
-    public PCClass(String name, int initiative, int AC){
+    public Actor(String name, int initiative, int AC){
         this.name = name;
         this.initiative = initiative;
         this.AC = AC;
     }
 
-    private PCClass(Parcel in){
+    private Actor(Parcel in){
         name = in.readString();
         initiative = in.readInt();
         AC = in.readInt();
@@ -34,13 +34,13 @@ public class PCClass implements Parcelable {
         out.writeInt(AC);
     }
 
-    public static final Parcelable.Creator<PCClass> CREATOR = new Parcelable.Creator<PCClass>(){
-        public PCClass createFromParcel(Parcel in){
-            return new PCClass(in);
+    public static final Parcelable.Creator<Actor> CREATOR = new Parcelable.Creator<Actor>(){
+        public Actor createFromParcel(Parcel in){
+            return new Actor(in);
         }
 
-        public PCClass[] newArray(int size){
-            return new PCClass[size];
+        public Actor[] newArray(int size){
+            return new Actor[size];
         }
     };
 }
